@@ -1,5 +1,7 @@
+import 'package:app/provider/activeprovidertheme.dart';
 import 'package:app/widget/themeswitch.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
   const MyAppBar({super.key});
@@ -8,7 +10,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     return AppBar(
         title: Text(
-          'GPT',
+          'Chat LGBT',
           style: TextStyle(
             color: Theme.of(context).colorScheme.onPrimary,
           ),
@@ -16,7 +18,11 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
         actions: [
           Row(
             children: [
-              Icon(Icons.dark_mode),
+              Consumer(
+                builder: (context, ref, child) => Icon(
+                  ref.watch(activeThemeProvider) == Themes.dark ? Icons.dark_mode : Icons.light_mode),
+                
+              ),
               SizedBox(width: 8),
               ThemeSwitch(),
           ],)

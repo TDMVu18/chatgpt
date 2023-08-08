@@ -3,6 +3,7 @@ import 'package:app/provider/activeprovidertheme.dart';
 import 'package:app/screen/chatscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:app/screen/authscreen.dart';
 
 void main() {
   runApp(const ProviderScope(child: App()));
@@ -18,7 +19,8 @@ class App extends ConsumerWidget {
         theme: lightTheme,
         darkTheme: darkTheme,
         debugShowCheckedModeBanner: false,
-        themeMode: activeTheme == Themes.dark ? ThemeMode.dark : ThemeMode.light,
-        home: const ChatScreen());
+        themeMode:
+            activeTheme == Themes.dark ? ThemeMode.dark : ThemeMode.light,
+        home: const AuthScreen());
   }
 }

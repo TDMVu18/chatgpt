@@ -10,7 +10,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     return AppBar(
         title: Text(
-          'Chat LGBT',
+          'AppGPT',
           style: TextStyle(
             color: Theme.of(context).colorScheme.onPrimary,
           ),

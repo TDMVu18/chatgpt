@@ -1,6 +1,6 @@
 # app
 
-ChatGPT
+A new Flutter project.
 
 ## Getting Started
 

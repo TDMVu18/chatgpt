@@ -23,8 +23,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
                   ref.watch(activeThemeProvider) == Themes.dark ? Icons.dark_mode : Icons.light_mode),
                 
               ),
-              SizedBox(width: 8),
-              ThemeSwitch(),
+              const SizedBox(width: 8),
+              const ThemeSwitch(),
           ],)
         ],
       );
